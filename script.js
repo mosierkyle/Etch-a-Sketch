@@ -4,6 +4,7 @@ const board = document.querySelector('#board');
 const boardBtn = document.querySelector('#new-board');
 const clearBtn = document.querySelector('#clear-board');
 const colorBtn = document.querySelector('#change-color');
+let color = 'black';
 
 function makeBoard(num = 16) {
     for(let i = 0; i < num; i++) {
@@ -20,7 +21,7 @@ function makeBoard(num = 16) {
     for(let i = 0; i < squareArr.length; i++) {
         let selected = squareArr[i];
         selected.addEventListener('mouseover', function () {
-            selected.style.backgroundColor = 'black';
+            selected.style.backgroundColor = `${color}`;
             })
     }
 }
@@ -44,11 +45,20 @@ function clearBoard() {
     }
 };
 
-makeBoard(144);
+function changeColor(newColor) {
+    color = newColor;
+}
+
+makeBoard(225);
 
 boardBtn.addEventListener('click', function () {
-    newBoard(prompt('How big do you want your drawing board to be?'))
+    newBoard(prompt('How big do you want your drawing board to be? (how many squares)'))
 });
 
 clearBtn.addEventListener('click', function () {
     clearBoard()});
+
+colorBtn.addEventListener('click', function () {
+    changeColor(prompt('Enter a new color'));
+})
+
