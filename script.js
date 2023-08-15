@@ -13,6 +13,14 @@ function makeBoard(num = 16) {
         squares[i].style.height = `${((Math.sqrt(num)/num) * 600) -1}px` ;
         squares[i].style.width = `${((Math.sqrt(num)/num) * 600) -1}px` ;
     }
+    
+    let squareArr = Array.from(squares);
+    for(let i = 0; i < squareArr.length; i++) {
+        let selected = squareArr[i];
+        selected.addEventListener('mousemove', function () {
+        selected.style.backgroundColor = 'black';
+        })
+    }
 }
 
 function newBoard(num) {
@@ -20,4 +28,8 @@ function newBoard(num) {
 }
 
 makeBoard(144);
+
+boardBtn.addEventListener('click', function () {
+    newBoard(prompt('How big do you want your drawing board to be?'))
+});
 
