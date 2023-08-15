@@ -7,11 +7,12 @@
 
 #container {
     background: linear-gradient(90deg,#2193b0,#6dd5ed);
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     display: flex; 
     flex-direction: column;
     align-items: center;
+    padding-bottom: 50px;
 }
 
 #container h1 {
@@ -32,9 +33,25 @@
     border-radius: 10px;
     border: none;
     background-color: aliceblue;
-    color:rgb(72, 72, 162);
+    color: rgba(0,0,0,.8);
     font-weight: bold;
     margin-top: -1rem;
 }
 
+#new-board :hover {
+    cursor: pointer;
+    background-color: rgba(240,248,255,0.8);
+}
+
+#board {
+    min-height: 600px;
+    min-width: 600px;
+    border: 3px solid rgba(0,0,0,.2);
+    background-color: white;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+}
 
