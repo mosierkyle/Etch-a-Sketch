@@ -2,4 +2,39 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: geneva;
 }
+
+#container {
+    background: linear-gradient(90deg,#2193b0,#6dd5ed);
+    height: 100vh;
+    width: 100vw;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+#container h1 {
+    color: aliceblue;
+    padding: 1rem 0;
+}
+
+#button-container {
+    width: 100%;
+    min-height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#new-board {
+    padding: .5rem 1.5rem;
+    border-radius: 10px;
+    border: none;
+    background-color: aliceblue;
+    color:rgb(72, 72, 162);
+    font-weight: bold;
+    margin-top: -1rem;
+}
+
+
