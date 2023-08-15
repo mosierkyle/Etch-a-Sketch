@@ -5,6 +5,10 @@
     font-family: geneva;
 }
 
+:root {
+    --draw: aliceblue;
+}
+
 #container {
     background: linear-gradient(90deg,#2193b0,#6dd5ed);
     height: 100%;
@@ -32,7 +36,7 @@
     padding: .5rem 1.5rem;
     border-radius: 10px;
     border: none;
-    background-color: aliceblue;
+    background-color: var(--draw);
     color: rgba(0,0,0,.8);
     font-weight: bold;
     margin-top: -1rem;
@@ -47,7 +51,7 @@
     height: 600px;
     width: 600px;
     border: 3px solid rgba(0,0,0,.2);
-    background-color: white;
+    background-color:  var(--draw);
     padding-bottom: 50px;
     border-radius: 10px;
     display: flex;
@@ -62,6 +66,12 @@
 .pixel {
     height: 25%;
     width: 25%;
-    background-color: white;
+    z-index: 999;
+    background-color: var(--draw);
 }
 
+.pixel :hover {
+    cursor: pointer;
+    z-index: 999;
+    background: black;
+}
